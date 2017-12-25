@@ -1,0 +1,72 @@
+﻿@model TP_KP_DLS.Models.Book
+
+@{
+    ViewBag.Title = "DeleteBook";
+}
+
+<h2>DeleteBook</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Book</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_Book)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID_Book)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Book_Author_Surname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Book_Author_Surname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Book_Author_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Book_Author_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Book_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Book_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Book_Link)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Book_Link)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Book_ID_Subject)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Book_ID_Subject)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "BookList")
+        </div>
+    }
+</div>

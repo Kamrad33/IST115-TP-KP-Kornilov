@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Devart (www.devart.com), Master-detail document file -->
+<!-- Modifying this generated file will probably render it invalid -->
+<Document>
+  <Properties>
+    <Type>Master-detail Document</Type>
+    <DatabaseProvider>aa8afe9c-7d62-4564-b477-c12e62e0f440</DatabaseProvider>
+    <ProviderVersion>5.5.311.0</ProviderVersion>
+    <SchemaVersion>1.0</SchemaVersion>
+  </Properties>
+  <Connection Name="SERGVLAD\SQLEXPRESS">
+    <Category>00000000-0000-0000-0000-000000000000</Category>
+    <ConnectionString>Data Source=SERGVLAD\SQLEXPRESS;Encrypt=False;Integrated Security=True;User ID=SergVlad\Serg</ConnectionString>
+  </Connection>
+  <Views ShowAdditionalViews="True" IsLayoutActiveAttribute="False" MainViewAttribute="Design" MainViewScale="75">
+    <View Name="Design" Active="True" Visible="True">
+      <Data>
+        <Properties LocationX="-58.620689333879" LocationY="-2.2988505621129" Scale="0.87" />
+        <Tables>
+          <Table Name="DLS_Server.dbo.Book" Type="Table" Left="220" Top="230" Width="173.156677246094" Height="162" Collapsed="False" IsMaster="True" FetchLimit="1000">
+            <Fields>
+              <Field Name="ID_Book" InSelect="True" SortType="0" />
+              <Field Name="Book_Author_Surname" InSelect="True" SortType="0" />
+              <Field Name="Book_Author_Name" InSelect="True" SortType="0" />
+              <Field Name="Book_Name" InSelect="True" SortType="0" />
+              <Field Name="Book_Link" InSelect="False" SortType="0" />
+              <Field Name="Book_ID_Subject" InSelect="True" SortType="0" />
+            </Fields>
+          </Table>
+          <Table Name="DLS_Server.dbo.Subject" Type="Table" Left="602.298847273581" Top="260.919538799815" Width="173.156677246094" Height="90" Collapsed="False" IsMaster="False" FetchLimit="1000">
+            <Fields>
+              <Field Name="ID_Subject" InSelect="True" SortType="0" />
+              <Field Name="Subject_Name" InSelect="True" SortType="0" />
+            </Fields>
+          </Table>
+        </Tables>
+        <Links />
+      </Data>
+    </View>
+    <View Name="Data" Visible="True" />
+  </Views>
+  <Settings>
+    <Options xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="PageOptions">
+      <TopLeftMargins>
+        <Width>10 mm</Width>
+        <Height>10 mm</Height>
+      </TopLeftMargins>
+      <BottomRightMargins>
+        <Width>10 mm</Width>
+        <Height>10 mm</Height>
+      </BottomRightMargins>
+      <PaperSize>
+        <Width>210 mm</Width>
+        <Height>297 mm</Height>
+      </PaperSize>
+    </Options>
+    <Options xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="PrintOptions" />
+  </Settings>
+</Document>
