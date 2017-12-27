@@ -1,0 +1,42 @@
+﻿@model TP_KP_DLS.Models.Test
+
+@{
+    ViewBag.Title = "DetailsTest";
+}
+
+<h2>DetailsTest</h2>
+
+<div>
+    <h4>Test</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_Test)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID_Test)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Test_ID_Subject)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Test_ID_Subject)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Test_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Test_Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "EditTest", new {  id = Model.ID_Test  }) |
+    @Html.ActionLink("Back to List", "TestList")
+</p>

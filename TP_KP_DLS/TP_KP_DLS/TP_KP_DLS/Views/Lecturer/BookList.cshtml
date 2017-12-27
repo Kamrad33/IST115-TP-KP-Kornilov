@@ -1,0 +1,69 @@
+﻿@model IEnumerable<TP_KP_DLS.Models.Book>
+
+@{
+    ViewBag.Title = "BookList";
+}
+
+<h2>BookList</h2>
+
+
+<p>
+    @if (User.IsInRole("Lecturer"))
+    {
+        @Html.ActionLink("Добавить книгу", "CreateBook", "Lecturer")
+    }
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ID_Book)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Book_Author_Surname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Book_Author_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Book_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Book_Link)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Book_ID_Subject)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID_Book)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Book_Author_Surname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Book_Author_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Book_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Book_Link)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Book_ID_Subject)
+            </td>
+
+            <td>
+                @Html.ActionLink("Информация", "DetailsBook", new {  id=item.ID_Book })          
+                @Html.ActionLink("Изменить", "EditBook", new {  id=item.ID_Book  })
+                @Html.ActionLink("Удалить", "DeleteBook", new {  id=item.ID_Book  })
+            </td>
+        </tr>
+    }
+
+</table>

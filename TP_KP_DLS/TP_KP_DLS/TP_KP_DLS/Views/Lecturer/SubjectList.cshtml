@@ -1,0 +1,39 @@
+﻿@model IEnumerable<TP_KP_DLS.Models.Subject>
+
+@{
+    ViewBag.Title = "SubjectList";
+}
+
+<h2>SubjectList</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateSubject", "Lecturer")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ID_Subject)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Subject_Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID_Subject)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Subject_Name)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "DetailsSubject", new { id = item.ID_Subject }) |
+            @Html.ActionLink("Edit", "EditSubject", new {  id=item.ID_Subject }) |
+            @Html.ActionLink("Delete", "DeleteSubject", new {  id=item.ID_Subject })
+        </td>
+    </tr>
+}
+
+</table>

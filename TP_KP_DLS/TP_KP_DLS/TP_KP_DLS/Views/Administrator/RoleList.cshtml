@@ -1,0 +1,36 @@
+﻿@model IEnumerable<TP_KP_DLS.Models.Role>
+
+@{
+    ViewBag.Title = "RoleList";
+}
+
+<h2>RoleList</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateRole")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditRole", new { id=item.Id }) |
+            @Html.ActionLink("Details", "DetailsRole", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "DeleteRole", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

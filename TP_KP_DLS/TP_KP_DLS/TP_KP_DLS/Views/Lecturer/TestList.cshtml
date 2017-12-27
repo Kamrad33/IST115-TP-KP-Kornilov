@@ -1,0 +1,45 @@
+﻿@model IEnumerable<TP_KP_DLS.Models.Test>
+
+@{
+    ViewBag.Title = "TestList";
+}
+
+<h2>TestList</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateTest")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ID_Test)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Test_ID_Subject)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Test_Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID_Test)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Test_ID_Subject)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Test_Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditTest", new {  id=item.ID_Test  }) |
+            @Html.ActionLink("Details", "DetailsTest", new {  id=item.ID_Test  }) |
+            @Html.ActionLink("Delete", "DeleteTest", new {  id=item.ID_Test  })
+        </td>
+    </tr>
+}
+
+</table>
